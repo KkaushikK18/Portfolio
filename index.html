@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kaushik Kumar | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="loader" id="loader">
+    <div></div><div></div><div></div>
+  </div>
+
+  <header>
+    <h1>Kaushik Kumar</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="theme-toggle" aria-label="Toggle Theme">
+  <span class="icon">🌙</span>
+</button>
+
+
+  </header>
+
+  <section class="hero">
+    <div>
+      <h2>Hello, I'm Kaushik 👋</h2>
+      <p>A passionate developer crafting modern web experiences.</p>
+    </div>
+  </section>
+
+  <section class="section about" id="about">
+    <h3>About Me</h3>
+    <p>I am a full-stack developer who loves building dynamic, engaging, and modern websites and applications. Passionate about problem-solving and design, I strive to create software that's not just functional, but delightful.</p>
+  </section>
+
+  <section class="section projects" id="projects">
+  <h3>Projects</h3>
+  <div class="project-grid">
+    <div class="project-card">
+      <a href="https://github.com/KkaushikK18/BloodBond" target="_blank">
+        <img src="red-drops-donate-blood-bag-600nw-2141439265.webp" alt="BloodBond Project">
+      </a>
+      <h4>BloodBond</h4>
+      <p>A platform to connect blood donors and recipients efficiently in emergency scenarios. Built with React and Firebase.</p>
+    </div>
+    <div class="project-card">
+      <a href="https://github.com/KkaushikK18/Cryptoplace" target="_blank">
+        <img src="original-932f1b921c2118406d492eac5cc8d710.webp" alt="CryptoPlace App">
+      </a>
+      <h4>CryptoPlace</h4>
+      <p>A real-time cryptocurrency tracker and dashboard with interactive charts and market updates using CoinGecko API.</p>
+    </div>
+    <div class="project-card">
+      <a href="https://github.com/KkaushikK18/Portfolio" target="_blank">
+        <img src="images.jfif" alt="Weather App">
+      </a>
+      <h4>Portfolio Website</h4>
+      <p>This very advanced portfolio website built using HTML, CSS and JavaScript with theme toggle, animations and custom effects.</p>
+    </div>
+  </div>
+</section>
+
+
+  <section class="section achievements" id="achievements">
+    <h3>Achievements</h3>
+    <p>🏆 Winner of 2 Hackathons<br>
+       📜 Completed 4+ Professional Certifications<br>
+       🚀 Published Open-Source Projects with GitHub Stars</p>
+  </section>
+
+  <section class="section contact" id="contact">
+    <h3>Contact</h3>
+    <p>Phone: 8709554808<br>
+       Email: <a href="mailto:kaushikk06703@gmail.com" style="color: #00e5ff;">kaushikk06703@gmail.com</a></p>
+    <div class="socials">
+      <a href="https://github.com/KkaushikK18" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/kaushik-kumar-354532293/" target="_blank">LinkedIn</a>
+      <a href="https://x.com/NeonKernel" target="_blank">Twitter</a>
+    </div>
+  </section>
+
+  <script>
+  window.addEventListener("load", () => {
+    document.getElementById("loader").style.display = "none";
+  });
+
+  const toggle = document.getElementById("theme-toggle");
+  const icon = toggle.querySelector('.icon');
+
+  toggle.addEventListener("click", () => {
+    document.body.classList.add("theme-changing");
+    document.body.classList.toggle("light");
+
+    // Update icon based on current theme
+    if (document.body.classList.contains("light")) {
+      icon.textContent = "☀️";
+    } else {
+      icon.textContent = "🌙";
+    }
+
+    // Remove animation class after transition
+    setTimeout(() => {
+      document.body.classList.remove("theme-changing");
+    }, 400);
+  });
+</script>
+
+<button id="scrollTopBtn">↑</button>
+
+</body>
+
+</html>
